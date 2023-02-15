@@ -11,7 +11,7 @@ function LeftTabsExample() {
     <div className="border border-primary p-3">
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
-          <Col sm={3}>
+          <Col sm={2}>
             <Nav
               variant="pills"
               className="flex-column text-center text-md-start"
@@ -33,7 +33,7 @@ function LeftTabsExample() {
               </Nav.Item>
             </Nav>
           </Col>
-          <Col sm={9}>
+          <Col sm={10}>
             <Tab.Content>
               <Tab.Pane eventKey="first">
                 <SearchBox />

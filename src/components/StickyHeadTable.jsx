@@ -27,19 +27,50 @@ const columns = [
     align: "right",
     format: (value) => value.toFixed(2),
   },
+  { id: "buttons", label: "Buttons", minWidth: 100 },
 ];
 
-function createData(name, code, population, size) {
+function createData(name, code, population, size, buttons) {
   const density = population / size;
-  return { name, code, population, size, density };
+  return { name, code, population, size, density, buttons };
 }
 
 const rows = [
-  createData("India", "IN", 1324171354, 3287263),
-  createData("China", "CN", 1403500365, 9596961),
-  createData("Italy", "IT", 60483973, 301340),
-  createData("United States", "US", 327167434, 9833520),
-  createData("Canada", "CA", 37602103, 9984670),
+  createData(
+    "India",
+    "IN",
+    1324171354,
+    3287263,
+    <button className="btn btn-primary">Read More</button>
+  ),
+  createData(
+    "China",
+    "CN",
+    1403500365,
+    9596961,
+    <button className="btn btn-primary">Read More</button>
+  ),
+  createData(
+    "Italy",
+    "IT",
+    60483973,
+    301340,
+    <button className="btn btn-primary">Read More</button>
+  ),
+  createData(
+    "United States",
+    "US",
+    327167434,
+    9833520,
+    <button className="btn btn-primary">Read More</button>
+  ),
+  createData(
+    "Canada",
+    "CA",
+    37602103,
+    9984670,
+    <button className="btn btn-primary">Read More</button>
+  ),
 ];
 
 export default function StickyHeadTable() {
